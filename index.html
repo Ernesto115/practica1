@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armonía House´s</title>
+</head>
+<style>
+
+    body {
+        background-color:ivory;
+        font-family: Arial, sans-serif;
+    }
+    header {
+        text-align:left;
+        color: black;
+        padding: 9px;
+        border: 10px;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 50px;
+    }
+
+    menu {
+        color: black;
+        padding: 10px;
+        border: 5px;
+        text-align: center;
+        font-size: 20px;
+
+    }
+    
+    section {
+        color: black;
+        padding: 10px;
+        border: 5px;
+        text-align: right;
+        font-size: 16px;
+    }
+
+    div {
+        width: 80%;
+        text-align:center;
+
+    }
+
+    footer {
+        color: black;
+        padding: 10px;
+        border: 5px;
+        text-align: right;
+        font-size: 20px;
+    }
+
+    
+</style>
+<body>
+
+    <header> 
+        <div>Armonía House´s</div>
+    </header>
+    <menu>
+        <div>
+            <ul>
+
+                <button onclick="see('https://practica1.test/Linea Blanca/LB.html')">
+                    LINEAS BLANCA
+                </button>
+
+                <button onclick="see('https://practica1.test/Muebles Interiores/MI.html')">
+                    MUEBLES INTERNOS
+                </button>
+
+                <button onclick="see('https://practica1.test/Muebles Exteriores/ME.html')">
+                    MUEBLES EXTERNOS
+                </button>
+                
+    
+            </ul> 
+        </div>
+    </menu>
+
+    <div id="cont1"> </div>
+
+    <section>
+        Es es una tienda online,que procura ayudarte a tener el hogar de tu sueños!!!
+    </section>
+    <footer> 
+        <a href="https://www.vintagecrossroads.com/?gad_source=1&gclid=Cj0KCQiAq-u9BhCjARIsANLj-s3VZEz5laQTeAzkohh_e3OmwB_8M5OTVE0seUeCYYvauC8LADpUMlkaAkijEALw_wcB" target="_blank">Vintage Crossroads</a>  </footer>
+
+        <footer> <a href="https://www.amazon.com.mx/s/?ie=UTF8&keywords=outlet+de+muebles&index=aps&tag=googhydr0mx-20&ref=pd_sl_r7gazuxsy_b&adgrpid=87204629175&hvpone=&hvptwo=&hvadid=406937675491&hvpos=&hvnetw=g&hvrand=509872273978530295&hvqmt=b&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1010036&hvtargid=kwd-4655562826&hydadcr=2170_11116286&mcid=7a13bfd0141b3ecebc5c8996b39b45a6"
+            target="_blank">Amazon</a></footer>
+
+            <footer> <a href="https://www.homedepot.com.mx/b/muebles?srsltid=AfmBOoptNIPxwg4UuiqVF6ERRhPTl_WiVGCHsGi5CH9CRqy4vXWcoJr8"target="_blank">Homedepot</a></footer>
+
+
+</body>
+
+<script>
+    function see (url) {
+        div1 = document.querySelector("#cont1");
+        fetch(url)
+        .then(response => response.text())
+        .then(data => {
+            div1.innerHTML = data;})
+    }
+</script>
+</html>
